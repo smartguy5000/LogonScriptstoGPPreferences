@@ -3,7 +3,10 @@
 		Converts old logon batch files into Group Policy Preference XML
 
 	.DESCRIPTION
-		Scans through all filtered batch files, and extracts net use statments
+		Scans through all filtered batch files, and extracts net use statments, it then formats them into 
+        XML suitable to be pasted into the Drives.xml document that creates your Drive Mappings in GP Preferences
+        The <drive></drive> elements should all be pasted within the <drives></drives> elements in the Drives.xml 
+        production file in your SYSVOL
 
 	.EXAMPLE
 		.\New-GPPreferenceMappingsFromStartupScriptsSANITIZED.ps1
@@ -23,7 +26,7 @@
 		.\XMLStu.xml
 
 	.NOTES
-		Name: New-GPPreferenceMappingsFromStartupScripts
+        Name: New-GPPreferenceMappingsFromStartupScripts
 		Author: Smartguy5000
 		Created: 2016-07-25
 		Version: 1.0.0.0
